@@ -23,40 +23,47 @@
 
     <div>
       <h3 class="text-center text-decoration-underline">Your 5 Day Forecast!</h3>
-        <div class="row w-100 justify-content-center">
-          <div class="card col-2 p-2 m-2">
-            <div id="city" class="card-body">
-              <h5 class="card-title text-center text-decoration-underline" id="yourCityName">Day 1</h5>
-              <p class="card-text" id="cityTemp"></p>
-              <p class="card-text" id="cityWind"></p>
-              <p class="card-text" id="cityHumidity"></p>
-            </div>
+      <div class="row w-100 justify-content-center">
+        <div class="card col-2 p-2 m-2">
+          <div id="city" class="card-body">
+            <h5 class="card-title text-center text-decoration-underline" id="yourCityName">Day 1</h5>
+            <p class="card-text" id="cityTemp"></p>
+            <p class="card-text" id="cityWind"></p>
+            <p class="card-text" id="cityHumidity"></p>
           </div>
-          <div class="card col-2 p-2 m-2">
-            <div class="card-body">
-              <h5 class="card-title text-center text-decoration-underline" id="rainA">Day 2</h5>
-              <p class="card-text" id="rainB"></p>
-            </div>
+        </div>
+        <div class="card col-2 p-2 m-2">
+          <div class="card-body">
+            <h5 class="card-title text-center text-decoration-underline" id="rainA">Day 2</h5>
+            <p class="card-text" id="rainB"></p>
           </div>
-          
-          <footer>
-          <div class="col sm-8">
-            <div class="row m1-2 bg-secondary text-light border border-dark-rounded text-center">
-              <div class="col-sm-12" id="current-weather">
-                <h2 class="city-name mb-1 mt-2 bolder text-decoration-underline">Your City!</h2>
-                <p>Temperature:</p>
-                <p>Wind Speed:</p>
-                <p>UV Index:</p>
-                <p>Humidity:</p>
-              </div>
-            </div>
+        </div>
+        <div class="card col-2 p-2 m-2">
+          <div class="card-body">
+            <h5 class="card-title text-center text-decoration-underline" id="sunA">Day 3</h5>
+            <p class="card-text" id="sunB"></p>
           </div>
-        </footer>
-         
+        </div>
 
   </container>
 
+
+  <footer>
+    <div class="row bg-secondary text-light text-center">
+      <div class="col-sm-12" id="current-weather">
+        <h2 class="city-name  text-decoration-underline">Your City Information!</h2>
+        <p>Temperature:</p>
+        <p>Wind Speed:</p>
+        <p>UV Index:</p>
+        <p>Humidity:</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
+
+
+
 
 </html>
