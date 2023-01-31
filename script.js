@@ -1,21 +1,30 @@
-var town = ""
-var apiKey = "0d014af5b06cb6bd943a8ea52f2c56e1"
+var searchLocation = document.getElementById('#search');
+var apiKey = "d1c520821a4a8826e47929caf6ced52f"
 
-//  apiKey = "0d014af5b06cb6bd943a8ea52f2c56e1"
+//  apiKey = "d1c520821a4a8826e47929caf6ced52f"
 //  url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=imperial`;
+//geo api url = "http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}";
 
 
-var findCity = function () {
-    var town = $("#townInput").val();
-    localStorage.setItem("town", town);
-    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q="+ town + "$appid=" + apiKey + "&units=imperial";
+
+//------ function to use api to get back the location weather ------
+function fetchWeather(cityLocation) {
+    var apiUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + searchLocation + "&limit=5&appid=" + apiKey;
+
     fetch(apiUrl)
-    .then(function (response){
-        if (response.ok) {
-            response.json().then(function (data) {
-                displayInfo(data);
-            });
-        }
-    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (info) {
+            console.log(info);
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
 }
 
+var search = function (event) {
+    event.preventDefault();
+    var cityLocation = searchLocation.value.trim();
+    fetchWeather(cityLocation);
+}
