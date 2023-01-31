@@ -12,17 +12,19 @@
 </head>
 
 <body>
-  <header class="text-center fs-1 text-warning fw-bold p-3 text-decoration-underline"> Weather DashBoard App</header>
+  <header class="text-center fs-1 text-warning fw-bold p-3 text-decoration-underline">
+     Weather DashBoard App
+  </header>
 
   <container>
-    <div class="col-sm-3 border-dark text-center bg-secondary text-light m-2">
+    <div class="col-sm-3  text-center bg-secondary text-light m-2">
       <h1> Search Your City!</h1>
       <input id="cityInput" class="m-3 form" type="text" placeholder="Search">
-      <button type="submit" class="m-3 btn btn-primary" id="init">Search</button>
+      <button type="submit" class="m-1 btn btn-warning text-black" id="init">Search</button>
     </div>
 
     <div>
-      <h3 class="text-center text-decoration-underline">Your 5 Day Forecast!</h3>
+      <h3 class="text-center fs-2 text-decoration-underline">Your 5 Day Forecast!</h3>
       <div class="row w-100 justify-content-center">
         <div class="card col-2 p-2 m-2">
           <div id="city" class="card-body">
@@ -44,6 +46,22 @@
             <p class="card-text" id="sunB"></p>
           </div>
         </div>
+        <div class="card col-2 p-2 m-2">
+          <div class="card-body">
+            <h5 class="card-title text-center text-decoration-underline" id="thunderA">Day 4</h5>
+            <p class="card-text" id="thunderB"></p>
+          </div>
+        </div>
+        <div class="card col-2 p-2 m-2">
+          <div class="card-body">
+            <h5 class="card-title text-center text-decoration-underline" id="rainA">Day 5</h5>
+            <p class="card-text" id="rainB"></p>
+            <ul id="rainC">
+            </ul>
+          </div>
+        </div>
+      
+      
 
   </container>
 
